@@ -1,10 +1,10 @@
-.home-wrapper {
-  background:
+body .home-wrapper {
+  /*background:
   linear-gradient(
 	  rgba(233, 233, 230, 0.63),
 	  rgba(233, 233, 230, 0.63)
     ),
-  url(../assets/apartment.jpg) no-repeat center center fixed;
+  url(../assets/apartment.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -96,40 +96,27 @@ p {
 /* results page*/
 
 .search-refine {
-  background: red;
   padding: 1em;
-}
-
-#refine-btn {
-  margin-top: 1em;
-  background: transparent;
-  border: 0;
-  outline: 0;
-  border: 2px solid black;
-  padding: .3em;
-  margin-bottom: 2.8em;
-}
-
-.refinements {
-  width: 60%;
-  /*makea media query to wrap at a certain breakpoint: flex-wrap: wrap;*/
+  width: 70%;
 }
 
 #borrowing-power {
   margin-right: 1em;
 }
 
+#locality {
+  width: 30%;
+}
+
 .results-detail {
   height: 100%;
-  background: grey;
 }
 
 .results {
-  background: green;
+  background: gainsboro;
   height: 100%;
 }
 
 .map {
-  background: yellow;
   height: 100%;
 }

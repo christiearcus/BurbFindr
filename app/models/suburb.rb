@@ -17,7 +17,7 @@ class Suburb < ActiveRecord::Base
 
       if suburb.state == state
         if (suburb.median_price_unit < max_price && suburb.median_price_unit > min_price) || (suburb.median_price_house < max_price && suburb.median_price_house > min_price)
-          suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, unitPrice: suburb.median_price_house, geocode: suburb.geocode, state: suburb.state })
+          suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, unitPrice: suburb.median_price_house, lat: suburb.lat, long: suburb.long , state: suburb.state })
         end
       end
 

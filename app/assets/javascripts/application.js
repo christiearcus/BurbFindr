@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require underscore.js
 //= require handlebars.js
-//= require app.js
+//= require_tree .
+//= require map.js

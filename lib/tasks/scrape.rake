@@ -65,8 +65,8 @@ def saveSuburb(row)
   suburb.state = row[2]
   suburb.median_price_house = number(@housePrice)
   suburb.median_price_unit = number(@unitPrice)
-  suburb.lat = row[5].to_i
-  suburb.long = row[6].to_i
+  suburb.lat = row[5]
+  suburb.long = row[6]
   suburb.save
   sleep 7
 

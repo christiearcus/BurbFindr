@@ -1,27 +1,29 @@
 <div class="results-wrapper">
 
     <header class="section search-refine">
-      <h2>refine search</h2>
-      <div class="refinements">
-        <div class="col span_1_of_3 info-text">
+      <h3 class="hero">BurbFindr <i class="fa fa-home" aria-hidden="true"></i></h3>
+      <h2>Refine search</h2>
+
+
+      <div class="section">
+        <div class="col span_1_of_3">
           <input type="text" id="borrowing-power" placeholder="Purchase amount" value="">
         </div>
 
-        <div class="col span_2_of_3 info-text">
+        <div class="col span_2_of_3">
           <select id="locality" name="state">
-            <option>Melbourne</option>
-            <option>Sydney</option>
-            <option>Adelaide</option>
-            <option>Camberra</option>
-            <option>Perth</option>
+            <option>VIC</option>
+            <option>NSW</option>
+            <option>NT</option>
+            <option>QLD</option>
+            <option>SA</option>
+            <option>ACT</option>
+            <option>WA</option>
           </select>
-          <button id="refine-btn">Find suburbs</button>
         </div>
 
     </div>
     </header>
-
-
 
       <div class="section results-detail">
         <main class="col span_1_of_3 results">
@@ -29,33 +31,15 @@
           <% @results.each do |suburb| %>
           <p><%= suburb[:suburbName] %></p>
           <p><%= suburb[:housePrice] %></p>
-          <p><%= suburb[:geocode] %></p>
+          <p><%= suburb[:lat] %></p>
+          <p><%= suburb[:long] %></p>
           <% end %>
 
 
       </main>
-          <div class="map col span_2_of_3 map">{{googleMap}}</div>
+          <div class="map col span_2_of_3" id="map"></div>
         </div>
 
 
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0K5l9hQeeAb90ir6ogbTbmxMyLIR6ks"></script>
-<script>
-
-  // load map
-  var map = new google.maps.Map($('.map')[0], {
-    zoom: 11,
-    center: { lat: -37.813155, lng: 144.964078 }
-    // array of state and get most appropriate lat & long for selected state
-  });
-
-
-  var marker = new google.maps.Marker({
-        position: { lat: -37.8219826, lng: 144.984614 },
-        map: map,
-        title: 'test'
-      });
-
-    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
-
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0K5l9hQeeAb90ir6ogbTbmxMyLIR6ks&callback=initMap"></script>
