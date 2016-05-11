@@ -8,19 +8,22 @@ class Suburb < ActiveRecord::Base
     Suburb.where('median_price_house < ? and median_price_house > ?', min_price, max_price)
   end
 
-  def self.selection(min_price, max_price)
+  def self.selection(min_price, max_price, state)
 
     suburbs = Suburb.all
     suburb_array = []
 
     suburbs.each do |suburb|
-      if (suburb.median_price_unit < max_price && suburb.median_price_unit > min_price) || (suburb.median_price_house < max_price && suburb.median_price_house > min_price)
-        suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, unitPrice: suburb.median_price_house, geocode: suburb.geocode, state: suburb.state })
+
+      if suburb.state == state
+        if (suburb.median_price_unit < max_price && suburb.median_price_unit > min_price) || (suburb.median_price_house < max_price && suburb.median_price_house > min_price)
+          suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, unitPrice: suburb.median_price_house, geocode: suburb.geocode, state: suburb.state })
+        end
       end
+
     end
 
     return suburb_array
-
   end
 
 end

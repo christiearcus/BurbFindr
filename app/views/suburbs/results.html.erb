@@ -8,7 +8,7 @@
         </div>
 
         <div class="col span_2_of_3 info-text">
-          <select id="locality">
+          <select id="locality" name="state">
             <option>Melbourne</option>
             <option>Sydney</option>
             <option>Adelaide</option>
@@ -48,6 +48,7 @@
     center: { lat: -37.813155, lng: 144.964078 }
     // array of state and get most appropriate lat & long for selected state
   });
+
 
   var marker = new google.maps.Marker({
         position: { lat: -37.8219826, lng: 144.984614 },

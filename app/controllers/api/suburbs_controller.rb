@@ -9,7 +9,7 @@ module Api
     end
 
     def suburb_selection
-      Suburb.selection(0, params[:max_price].to_i)
+      Suburb.selection(0, params[:max_price].to_i, params[:state])
       render json: suburb_hash.to_json, status: 200
     end
   end
