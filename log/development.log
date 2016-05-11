@@ -17953,3 +17953,5 @@ Processing by SuburbsController#results as HTML
   [1m[36mSuburb Load (0.3ms)[0m  [1mSELECT "suburbs".* FROM "suburbs"[0m
   Rendered suburbs/results.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+  [1m[36mSuburb Load (1.7ms)[0m  [1mSELECT "suburbs".* FROM "suburbs"[0m
+  [1m[36mSuburb Load (0.8ms)[0m  [1mSELECT "suburbs".* FROM "suburbs"[0m
