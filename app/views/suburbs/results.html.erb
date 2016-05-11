@@ -41,18 +41,19 @@
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0K5l9hQeeAb90ir6ogbTbmxMyLIR6ks"></script>
 <script>
-// load map
-var map = new google.maps.Map($('.map')[0], {
-  zoom: 11,
-  center: { lat: -37.813155, lng: 144.964078 }
-});
 
+  // load map
+  var map = new google.maps.Map($('.map')[0], {
+    zoom: 11,
+    center: { lat: -37.813155, lng: 144.964078 }
+    // array of state and get most appropriate lat & long for selected state
+  });
 
-var marker = new google.maps.Marker({
-      position: { lat: -37.8219826, lng: 144.984614 },
-      map: map,
-      title: 'test'
-    });
+  var marker = new google.maps.Marker({
+        position: { lat: -37.8219826, lng: 144.984614 },
+        map: map,
+        title: 'test'
+      });
 
     marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
 
