@@ -1,0 +1,135 @@
+.home-wrapper {
+  background:
+  linear-gradient(
+	  rgba(233, 233, 230, 0.63),
+	  rgba(233, 233, 230, 0.63)
+    ),
+  url(../assets/apartment.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body, .results-wrapper {
+  font-family: 'Lato', sans-serif;
+  height: 100%; margin: 0px; padding: 0px;
+}
+
+label, input, .home-btn, footer {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 2em;
+}
+
+input, select {
+  background: transparent;
+  color: black;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid black;
+  min-width: 70%;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 10px;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+select {
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+.home-btn {
+  margin-top: 1em;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border: 2px solid black;
+  padding: .3em;
+  margin-bottom: 2.8em;
+}
+
+button:hover {
+  background: rgba(12, 7, 7, 0.56)
+}
+
+h1 {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: .5em;
+  font-weight: 300;
+}
+
+.centre {
+  text-align: center;
+}
+
+.form {
+  margin-left: 20%;
+}
+
+.info-block {
+  margin-top: 2em;
+  background-color: mintcream;
+}
+
+.info-text {
+  padding: 1.5em;
+}
+
+p {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+/* results page*/
+
+.search-refine {
+  background: red;
+  padding: 1em;
+}
+
+#refine-btn {
+  margin-top: 1em;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border: 2px solid black;
+  padding: .3em;
+  margin-bottom: 2.8em;
+}
+
+.refinements {
+  width: 60%;
+  /*makea media query to wrap at a certain breakpoint: flex-wrap: wrap;*/
+}
+
+#borrowing-power {
+  margin-right: 1em;
+}
+
+.results-detail {
+  height: 100%;
+  background: grey;
+}
+
+.results {
+  background: green;
+  height: 100%;
+}
+
+.map {
+  background: yellow;
+  height: 100%;
+}
