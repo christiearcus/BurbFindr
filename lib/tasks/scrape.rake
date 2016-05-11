@@ -62,6 +62,7 @@ def saveSuburb(row)
   geocode = "center: {lat:" + row[5].to_s + ",lng:" + row[6].to_s + "}"
   suburb = Suburb.new
   suburb.suburb_name = row[1]
+  suburb.state = row[2]
   suburb.median_price_house = number(@housePrice)
   suburb.median_price_unit = number(@unitPrice)
   suburb.geocode = geocode
