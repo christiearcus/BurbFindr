@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511070724) do
+ActiveRecord::Schema.define(version: 20160511073252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "suburbs", force: :cascade do |t|
     t.string  "suburb_name"
-    t.string  "geocode"
     t.integer "median_price_house"
     t.integer "median_price_unit"
     t.string  "state"
+    t.integer "lat"
+    t.integer "long"
   end
 
 end
