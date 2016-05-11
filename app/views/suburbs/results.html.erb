@@ -35,8 +35,8 @@
       <div class="section results-detail">
         <main class="col span_1_of_3 results">
 
-          <% @results[:unit_afford_subs].each do |suburb| %>
-          <p><%= suburb%></p>
+          <% @results.each do |suburb| %>
+          <p><%= suburb[:suburbName] %></p>
           <% end %>
 
 
