@@ -26,20 +26,19 @@
     </header>
 
       <div class="section results-detail">
-        <main class="col span_1_of_3 results">
 
-          <% @results.each do |suburb| %>
-          <p><%= suburb[:suburbName] %></p>
-          <p><%= suburb[:housePrice] %></p>
-          <p><%= suburb[:lat] %></p>
-          <p><%= suburb[:long] %></p>
-          <% end %>
+        <main id="result" class="col span_1_of_3 results">
+          <script id="result-template" type="text/x-handlebars-template">
+            <p>Suburb name: <span>{{ suburbName }}</span></p>
+            <p>Median house price: <span>{{ medianHouse }}</span></p>
+            <p>Median unit price: <span>{{ medianUnit }}</span></p>
+          </script>
+        </main>
 
+        <div class="map col span_2_of_3" id="map"></div>
 
-      </main>
-          <div class="map col span_2_of_3" id="map"></div>
-        </div>
-
+      </div>
 
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0K5l9hQeeAb90ir6ogbTbmxMyLIR6ks&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0K5l9hQeeAb90ir6ogbTbmxMyLIR6ks"></script>
+<!-- &callback=initMap -->

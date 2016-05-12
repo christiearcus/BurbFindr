@@ -15,4 +15,4 @@
 //= require underscore.js
 //= require handlebars.js
 //= require_tree .
-//= require map.js
+//= require results.js
