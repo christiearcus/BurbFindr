@@ -52,6 +52,4 @@ $.ajax(settings).done(function(response) {
       }; //closes init function
       // initialize map
       initMap();
-  }).fail(function(response) {
-    console.log('oops')
   });
