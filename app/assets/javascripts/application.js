@@ -16,3 +16,4 @@
 //= require handlebars.js
 //= require_tree .
 //= require results.js
+//= require nouislider

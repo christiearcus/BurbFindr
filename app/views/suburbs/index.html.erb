@@ -29,6 +29,12 @@
 
       </div>
 
+      <div class="col s12">
+      <div id="slider"></div>
+      <input type="hidden" id="hidden" name="hidden">
+
+  </div>
+
       <div class="col s12 centre-btn">
         <button class="btn-large grey darken-2"><i class="material-icons right" id="search">search</i>Go</button>
       </div>
@@ -66,5 +72,26 @@
     <script type="text/javascript">
     $('#locality').material_select();
     </script>
+
+    <script>  var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+	start: [500000, 800000],
+  step: 50000,
+	connect: true,
+	range: {
+		'min': 400000,
+		'max': 2000000
+	}
+});
+
+
+var rangeholder = document.getElementById('hidden');
+
+  slider.noUiSlider.on('update', function( values ) {
+	document.getElementById('hidden').value = values;
+})
+
+</script>
 
 </body>

@@ -76,7 +76,6 @@ end
 
 suburb_array.each do |row|
   if !suburb_in_db? row[1]
-
     if row[2] == "NSW"
       if (Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])) < 30
         saveSuburb(row)
