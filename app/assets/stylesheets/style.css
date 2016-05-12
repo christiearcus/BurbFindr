@@ -4,6 +4,27 @@ html, body {
   height: 100%;
 }
 
+/*Homepage overrides*/
+
+.bg-img {
+  background:
+  linear-gradient(
+	  rgba(233, 233, 230, 0.63),
+	  rgba(233, 233, 230, 0.63)
+    ),
+  url(apartment.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.centre-btn {
+  text-align: center;
+  margin-top: 3em;
+}
+
 /*Results page overrides*/
 
 .brand-logo {
