@@ -1,54 +1,67 @@
-<div class="home-wrapper">
-  <div class="section centre">
-    <h1 class="hero">BurbFindr <i class="fa fa-home" aria-hidden="true"></i></h1>
+<div class="container">
+
+  <div class="col s12">
+    <h1 class="center-align">BurbFindr <i class="fa fa-home" aria-hidden="true"></i></h1>
   </div>
 
-<form class="" action="/results" method="get">
-  <div class="section form">
-    <div class="span_3_of_3">
+  <form class="" action="/results" method="get">
+    <div class="col s12">
       <label class="">How much do you want to pay?</label>
+      <input type="text" name="max_price" id="borrowing-power" placeholder="Purchase amount" value="">
     </div>
-  </div>
-  <div class="section form">
-    <input type="text" name="max_price" id="borrowing-power" placeholder="Purchase amount" value="">
-  </div>
-  <div class="section form">
-    <label class="">Where do you want to look?</label>
-  </div>
-  <div class="section form">
-    <select id="locality" name="state">
-      <option>VIC</option>
-      <option>NSW</option>
-      <option>ACT</option>
-      <option>SA</option>
-      <option>WA</option>
-      <option>NT</option>
-    </select>
-  </div>
-  <div class="section form">
-    <button class="home-btn" id="search">Find suburbs</button>
-  </div>
-</form>
 
-    <div class="section group info-block">
-      <div class="col span_1_of_3 info-text">
-        <h2>What's BurbFindr?</h2>
+    <div class="col s12">
+      <label class="">Where do you want to look?</label>
+
+      <div class="input-field col s12">
+      <select id="locality" name="state">
+        <option value="" disabled selected>Choose a state</option>
+        <option>VIC</option>
+        <option>NSW</option>
+        <option>ACT</option>
+        <option>SA</option>
+        <option>WA</option>
+        <option>NT</option>
+      </select>
+    </div>
+
+    </div>
+
+    <div class="col s12">
+      <button class="btn-large orange lighten-4"><i class="material-icons right" id="search">cloud</i>Go</button>
+    </div>
+  </form>
+
+
+    <div class="row">
+
+    <div class="col l4 s12">
+      <h2>What's BurbFindr?</h2>
         <p>
           BurbFindr is a simple to use tool to help you find an affordable suburb to live in, in your city. With hundreds of suburbs in metro areas, even knowing where to look can be daunting. Thankfully we're here to help start the process off for you!
         </p>
-      </div>
+    </div>
 
-      <div class="col span_1_of_3 info-text">
-        <h2>How do I use it?</h2>
+    <div class="col l4 s12">
+      <h2>How do I use it?</h2>
         <p>
           It's dead simple to use BurbFindr. All you need to do is enter how much you'd like to spend on your property, and which area you'd like to focus on.
         </p>
-      </div>
+    </div>
 
-      <div class="col span_1_of_3 info-text">
-        <h2>What will I get</h2>
-        <p>
-          We look at your criteria and match you with a list of suburb options that suit your financial position. Giving you a narrowed down set of suburb options will free you up for the fun stuff - like checking out the coffee and craft beer options around. I'm looking at you Melbournians.
-        </p>
-      </div>
-</div>
+    <div class="col l4 s12">
+      <h2>What will I get</h2>
+          <p>
+              We look at your criteria and match you with a list of suburb options that suit your financial position. Giving you a narrowed down set of suburb options will free you up for the fun stuff - like checking out the coffee and craft beer options around. I'm looking at you Melbournians.
+          </p>
+    </div>
+
+  </div>
+
+  </div>
+  <!-- closing page container tag -->
+
+
+<script type="text/javascript">
+$('#locality').material_select();
+</script>

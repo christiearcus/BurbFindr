@@ -1,3 +1,11 @@
+// materialize stuffs
+
+$(".dropdown-button").dropdown();
+$('#locality').material_select();
+
+
+// results data
+
 var settings = {
   url: 'http://localhost:3000/results/data',
   dataType: 'json',
@@ -8,7 +16,6 @@ $.ajax(settings).done(function(response) {
 
         // iterate over response to populate template for each suburb
         _.each(response, function(suburbText) {
-          debugger
           var templateString = $('#result-template').html();
           var templateFunction = Handlebars.compile(templateString);
           var resultHtml = templateFunction({
