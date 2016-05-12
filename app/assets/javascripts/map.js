@@ -45,7 +45,13 @@
         var marker = new google.maps.Marker({
               position: { lat: lat, lng: lng },
               map: map,
-              title: 'test'
+              title: suburb.suburb_name
             });
-      });
-  };
+            var infoWindow = new google.maps.InfoWindow(
+              {content: suburb.suburb_name + '<br>' + 'Median house price: ' + suburb.median_price_house + '<br>' + 'Median unit price: ' + suburb.median_price_unit}
+             );
+            marker.addListener('click', function() {
+              infoWindow.open(map, marker);
+          });
+        });
+}; //closes init function
