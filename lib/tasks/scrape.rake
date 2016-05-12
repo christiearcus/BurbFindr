@@ -3,6 +3,8 @@ require 'Nokogiri'
 require 'csv'
 require 'geocoder'
 require 'pry-rails'
+require 'pry'
+
 
 desc 'Scrapes website for data'
 task :scrape_data => :environment do
@@ -74,24 +76,24 @@ end
 
 suburb_array.each do |row|
   if !suburb_in_db? row[1]
+
     if row[2] == "NSW"
-      if (Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])) < 20
+      if (Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])) < 30
         saveSuburb(row)
         puts Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])
       end
     elsif row[2] == "VIC"
-      if (Geocoder::Calculations.distance_between(vic, [row[5].to_i, row[6].to_i])) < 20
+      if (Geocoder::Calculations.distance_between(vic, [row[5].to_i, row[6].to_i])) < 30
         saveSuburb(row)
         puts Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])
       end
     elsif row[2] == "SA"
-      if (Geocoder::Calculations.distance_between(sa, [row[5].to_i, row[6].to_i])) < 20
+      if (Geocoder::Calculations.distance_between(sa, [row[5].to_i, row[6].to_i])) < 30
         saveSuburb(row)
         puts Geocoder::Calculations.distance_between(nsw, [row[5].to_i, row[6].to_i])
-
       end
     elsif row[2] == "WA"
-      if (Geocoder::Calculations.distance_between(wa, [row[5].to_i, row[6].to_i])) < 20
+      if (Geocoder::Calculations.distance_between(wa, [row[5].to_i, row[6].to_i])) < 30
         saveSuburb(row)
       end
     end

@@ -54,3 +54,9 @@ nav {
   min-height: 100vh;
   overflow: hidden;
 }
+
+.scroll {
+  height: 100vh;
+  overflow: auto;
+
+}
