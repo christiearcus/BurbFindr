@@ -32,6 +32,9 @@ $.ajax(settings).done(function(response) {
         var lat = Number(response[0].lat)
         var long = Number(response[0].long)
 
+        // var lat = -38.170513
+        // var long = 145.968378
+
         // intstantiate google map
         function initMap() {
           var centre = {lat: lat, lng: long};
