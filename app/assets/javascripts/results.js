@@ -46,6 +46,39 @@ $.ajax(settings).done(function(response) {
             _.each(response, function(suburb) {
               var lat = Number(suburb.lat)
               var lng = Number(suburb.long)
+              var test = suburb.suburb_coords
+              var test_parsed = JSON.parse(test)
+
+              var polygCoords = function(suburbCoordSet){
+                  suburbHash = [];
+                  for(i=0;i<suburbCoordSet.length;i++){
+                    hashTemp = {}
+                    var lat = suburbCoordSet[i][1];
+                    var lng = suburbCoordSet[i][0];
+                    hashTemp['lat'] = lat;
+                    hashTemp['lng'] = lng;
+                    suburbHash.push(hashTemp)
+                  }
+                  return suburbHash
+                }
+
+                var newCoords = polygCoords(test_parsed)
+
+
+                var newArea = new google.maps.Polygon({
+                 paths: newCoords,
+                 strokeColor: '#FF0000',
+                 strokeOpacity: 0.8,
+                 strokeWeight: 2,
+                 fillColor: '#FF0000',
+                 fillOpacity: 0.35
+               });
+
+
+               newArea.setMap(map)
+
+
+
               var marker = new google.maps.Marker({
                     position: { lat: lat, lng: lng },
                     map: map,
@@ -57,8 +90,14 @@ $.ajax(settings).done(function(response) {
                    );
                   marker.addListener('click', function() {
                     infoWindow.open(map, marker);
+
+
                 });
+
               });
+//copy of response
+
+
       }; //closes init function
       // initialize map
       initMap();

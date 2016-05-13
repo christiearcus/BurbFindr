@@ -18,6 +18,8 @@ class SuburbsController < ApplicationController
   end
 
   def data
+
+    # test = JSON.parse(@@results.suburb_coords)
     render json: @@results.to_json
   end
 
