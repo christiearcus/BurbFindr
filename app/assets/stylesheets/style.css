@@ -65,3 +65,18 @@ nav {
   overflow: auto;
 
 }
+
+CSS additions
+-----
+#header{
+  height: 80px;
+}
+
+#slider-top{
+  padding-top: 20px;
+}
+
+#header{
+  background-color: grey;
+  color: white;
+}
