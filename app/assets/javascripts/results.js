@@ -64,7 +64,6 @@ $.ajax(settings).done(function(response) {
 
                 var newCoords = polygCoords(test_parsed)
 
-
                 var newArea = new google.maps.Polygon({
                  paths: newCoords,
                  strokeColor: '#FF0000',
