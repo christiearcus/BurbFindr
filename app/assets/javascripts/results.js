@@ -77,6 +77,9 @@ $.ajax(settings).done(function(response) {
 
                newArea.setMap(map)
 
+            //    google.maps.event.addListener(newArea, 'click', function (event) {
+            // alert(this.indexID);
+            // });
 
 
               var marker = new google.maps.Marker({
@@ -84,15 +87,20 @@ $.ajax(settings).done(function(response) {
                     map: map,
                     title: suburb.suburbName
                   });
+
+                  marker.setVisible(false)
                   // instantiate marker on map
                   var infoWindow = new google.maps.InfoWindow(
                     {content: suburb.suburbName + '<br>' + 'Median house price: ' + suburb.housePrice + '<br>' + 'Median unit price: ' + suburb.unitPrice}
                    );
-                  marker.addListener('click', function() {
+                  newArea.addListener('click', function() {
                     infoWindow.open(map, marker);
 
 
+
                 });
+
+
 
               });
 //copy of response
