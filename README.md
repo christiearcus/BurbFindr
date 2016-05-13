@@ -23,6 +23,6 @@ Using:
 * `bundle`
 * Start on your local host with `rails s` and enjoy :trophy:
 
-## Screenshots 
+## Screenshots
 
 ![BurbFindr](http://i.imgur.com/tKY2CfS.jpg)
