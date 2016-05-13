@@ -26,3 +26,5 @@ Using:
 ## Screenshots
 
 ![BurbFindr](http://i.imgur.com/tKY2CfS.jpg)
+
+![BurbFindr](http://i.imgur.com/zKbSt5j.jpg)
