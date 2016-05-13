@@ -25,6 +25,11 @@ html, body {
   margin-top: 3em;
 }
 
+.validation {
+  color: red !important;
+}
+
+
 /*Results page overrides*/
 
 .brand-logo {

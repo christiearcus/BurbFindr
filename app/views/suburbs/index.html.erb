@@ -6,17 +6,17 @@
       <h1 class="center-align grey-text text-darken-2">BurbFindr <i class="fa fa-home" aria-hidden="true"></i></h1>
     </div>
 
-    <form class="" action="/results" method="get">
-      <div class="col s12">
+    <form class="" id="cupcake" action="/results" method="get">
+      <div class="amount col s12">
         <label class="grey-text text-darken-2">How much do you want to pay?</label>
-        <input type="text" name="max_price" id="borrowing-power" value="">
+        <input class="" type="text" name="max_price" id="borrowing-power" value="" required>
       </div>
 
       <div class="col s12">
         <label class="grey-text text-darken-2">Where do you want to look?</label>
 
         <div class="input-field col s12">
-        <select id="locality" name="state">
+        <select id="locality" name="state" required>
           <option value="" disabled selected>Choose a state</option>
           <option>VIC</option>
           <option>NSW</option>
@@ -29,11 +29,11 @@
 
       </div>
 
-      <div class="col s12">
+      <!-- <div class="col s12">
       <div id="slider"></div>
       <input type="hidden" id="hidden" name="hidden">
 
-  </div>
+  </div> -->
 
       <div class="col s12 centre-btn">
         <button class="btn-large grey darken-2"><i class="material-icons right" id="search">search</i>Go</button>
@@ -70,28 +70,25 @@
     <!-- closing page container tag -->
 
     <script type="text/javascript">
+
+    // enable dropdown menu
     $('#locality').material_select();
+
+    // validation to stop non numerical chars in the borrowing field.
+    $('#cupcake').on('submit', function(event) {
+      event.preventDefault();
+      var formEntry = $('#borrowing-power').val();
+      var parsedEntry = Number(formEntry);
+      if (isNaN(parsedEntry)) {
+        var highlightText = $('.amount').addClass('validation').css('color', 'red');
+        return false;
+        }
+      else {
+        $('#cupcake')[0].submit();
+        return true
+      };
+    });
+
     </script>
-
-    <script>  var slider = document.getElementById('slider');
-
-noUiSlider.create(slider, {
-	start: [500000, 800000],
-  step: 50000,
-	connect: true,
-	range: {
-		'min': 400000,
-		'max': 2000000
-	}
-});
-
-
-var rangeholder = document.getElementById('hidden');
-
-  slider.noUiSlider.on('update', function( values ) {
-	document.getElementById('hidden').value = values;
-})
-
-</script>
 
 </body>

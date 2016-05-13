@@ -7,13 +7,14 @@ class SuburbsController < ApplicationController
 
   def results
 
-    @limits = params[:hidden].split(',')
-    @lowerLimit = @limits[0].to_i
-    @upperLimit = @limits[1].to_i
-    @@results = Suburb.selection(@lowerLimit, @upperLimit, params[:state])
-    
+    # code for slider
+    # @limits = params[:hidden].split(',')
+    # @lowerLimit = @limits[0].to_i
+    # @upperLimit = @limits[1].to_i
+    # @@results = Suburb.selection(@lowerLimit, @upperLimit, params[:state])
 
-    # @@results = Suburb.selection(0, params[:max_price].to_i, params[:state])
+
+    @@results = Suburb.selection(0, params[:max_price].to_i, params[:state])
   end
 
   def data
